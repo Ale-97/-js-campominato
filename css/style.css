@@ -1,0 +1,27 @@
+*{
+    width: 100%;
+}
+
+.col-1{
+    padding: 0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    height: 32px;
+}
+.col-4{
+    height: 100vh;
+}
+
+input{
+    color: rgba(0, 0, 0, 0);
+    background-color: white;
+    border: none;
+    height: 30px;
+}
+.color{
+    background-color: yellow;
+}
+.color-red{
+    background-color: red;
+}
