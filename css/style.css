@@ -22,10 +22,7 @@ input{
 .color{
     background-color: yellow;
 }
-.color-distance{
-    background-color: yellow;
-    color: rgba(0, 0, 0, 1);
-}
+
 .color-red{
     background-color: red;
 }

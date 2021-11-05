@@ -50,38 +50,53 @@ for(var t = 0;t < checkClick.length; t++){
     checkClick[t].value = h;
 }
 //CREO UN CICLO COSì DA PRENDERE IN CONSIDERAZIONE TUTTI I BOX
-for(var z = 0;z <= checkClick.length; z++){
+for(var z = 0;z < checkClick.length; z++){
 
     checkClick[z].onclick = function(){
 
         //QUI SCRIVO COSA VERRà ESEGUITO AL CLICK
         var w = parseInt(this.value);
         var area = [w-11,w-10,w-9,w-1,w+1,w+9,w+10,w+11];
+        var areaLeft=[10,20,30,40,50,60,70,80,90,100];
+        var areaRight=[1,11,21,31,41,51,61,71,81,91];
+
+
         var distance = 0;
     
         if(mine.includes(w)){
-            this.className = "color-red";
-            alert('HAI PERSO!');
-            
+            this.parentNode.classList.add("color-red");
+
+            // for(var r = 0;r < checkClick.length; r++){
+            //     checkClick[r].style.display = "none";
+            // }
+            // alert('HAI PERSO!!!');
         }
         else{
-            for(var p = 0; p < 8;p++){
+            for(var p = 0; p < area.length;p++){
                 if( mine.includes(area[p])){
-                distance = distance + 1
+                    if((areaLeft.includes(area[p]) && areaRight.includes(w)) || (areaRight.includes(area[p]) && areaLeft.includes(w))){}else{
+                        distance = distance + 1; 
+                    }
                 }
             }
+            
             if(distance<1){
-                this.className ="color";
+                this.parentNode.classList.add("color");
+                this.style.display = "none";
                 points = points + 1;
                
     
             }else if(distance > 0 && distance < 8) {
-                this.value=distance;
-                this.className = "color-distance";
+                this.parentNode.classList.add("color");
+                this.parentNode.innerHTML = distance;
                 points = points + 1;
             }
         } 
+
         outPoints.innerHTML =  points;
+        if(points === (100-numberMine)){
+            alert('HAI VINTO!');
+        }
         sessionStorage.setItem("oldPoints", points);
     
     };
