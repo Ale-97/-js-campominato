@@ -64,9 +64,11 @@ for(var z = 0;z < checkClick.length; z++){
         var distance = 0;
     
         if(mine.includes(w)){
-            this.parentNode.classList.add("color-red");
 
             for(var r = 0;r < checkClick.length; r++){
+                if(mine.includes(parseInt(checkClick[r].value))){
+                    checkClick[r].parentNode.classList.add("color-red");
+                }
                 checkClick[r].style.display = "none";
             }
             alert('HAI PERSO!!!');
