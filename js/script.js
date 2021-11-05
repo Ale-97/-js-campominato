@@ -66,10 +66,10 @@ for(var z = 0;z < checkClick.length; z++){
         if(mine.includes(w)){
             this.parentNode.classList.add("color-red");
 
-            // for(var r = 0;r < checkClick.length; r++){
-            //     checkClick[r].style.display = "none";
-            // }
-            // alert('HAI PERSO!!!');
+            for(var r = 0;r < checkClick.length; r++){
+                checkClick[r].style.display = "none";
+            }
+            alert('HAI PERSO!!!');
         }
         else{
             for(var p = 0; p < area.length;p++){
