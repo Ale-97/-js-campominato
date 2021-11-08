@@ -1,5 +1,6 @@
 *{
     width: 100%;
+    font-weight: bold;
 }
 
 .col-1{
@@ -12,17 +13,27 @@
 .container > .row >.col-4:first-of-type{
     height: 100vh;
 }
-
 input{
-    color: rgba(0, 0, 0, 0);
     background-color: white;
     border: none;
     height: 30px;
 }
-.color{
-    background-color: yellow;
+.check-box{
+    color: rgba(0, 0, 0, 0);
 }
+.flower,.radar,.mine{
+    background-size: cover;
 
-.color-red{
-    background-color: red;
+}
+.flower{
+    background-image:url(../img/flower.png);
+
+
+}
+.radar{
+    font-size: large;
+    color: red;
+}
+.mine{
+    background-image: url(../img/bomb.jpg);
 }
